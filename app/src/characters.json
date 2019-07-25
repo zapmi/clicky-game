@@ -1,0 +1,75 @@
+[
+    {
+      "id": 0,
+      "name": "Waldo 1",
+      "image": "/assets/images/w1.png",
+      "isClicked": false
+    },
+    {
+      "id": 1,
+      "name": "Waldo 2",
+      "image": "/assets/images/w2.png",
+      "isClicked": false
+    },
+    {
+      "id": 2,
+      "name": "Waldo 3",
+      "image": "/assets/images/w3.png",
+      "isClicked": false
+    },
+    {
+      "id": 3,
+      "name": "Waldo 4",
+      "image": "/assets/images/w4.png",
+      "isClicked": false
+    },
+    {
+      "id": 4,
+      "name": "Waldo 5",
+      "image": "/assets/images/w5.png",
+      "isClicked": false
+    },
+    {
+      "id": 5,
+      "name": "Waldo 6",
+      "image": "/assets/images/w6.png",
+      "isClicked": false
+    },
+    {
+      "id": 6,
+      "name": "Waldo 7",
+      "image": "/assets/images/w7.png",
+      "isClicked": false
+    },
+    {
+      "id": 7,
+      "name": "Waldo 8",
+      "image": "/assets/images/w8.png",
+      "isClicked": false
+    },
+    {
+      "id": 8,
+      "name": "Waldo 9",
+      "image": "/assets/images/w9.png",
+      "isClicked": false
+    },
+    {
+      "id": 9,
+      "name": "Waldo 10",
+      "image": "/assets/images/w10.png",
+      "isClicked": false
+    },
+    {
+      "id": 10,
+      "name": "Waldo 11",
+      "image": "/assets/images/w11.png",
+      "isClicked": false
+    },
+    {
+      "id": 11,
+      "name": "Waldo 12",
+      "image": "/assets/images/w12.png",
+      "isClicked": false
+    }
+  ]
+  
