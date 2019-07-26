@@ -11,7 +11,7 @@ class App extends Component {
   constructor() {
     super()
 
-    this.handleShuffleChararcters = this.handleShuffleChararcters.bind(this)
+    this.handleCharacterShuffle = this.handleCharacterShuffle.bind(this)
   }
 
   //values
@@ -23,11 +23,50 @@ class App extends Component {
     messageClass: "",
     characters: characters
   };
+
+  shuffle = (array) => {
+    let currentIndex = array.length;
+    let tempVal;
+    let randomIndex;
+
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+    }
+  }
 }
 
 
 
+handleChararcterShuffle = (name) => {
+  // this.handleResetWin();
+  var resetNeeded = false;
+  const characters = this.state.characters.map(ch => {
+    //ch.name === name ? { ...ch, isClicked: true } : ch
+    if(ch.name === name) {
+      if (ch.isClicked === false) {
+        this.handleCorrectChoice()
+        return { ...ch, isClicked: true}
+      }else{
+        resetNeeded = true
+        return { ...ch, isClicked: false}
+      }
+    }
+    return ch
+  })
 
+  if (resetNeeded) {
+    this.setState({
+      characters: this.shuffle(this.handleIncorrectChoice()),
+      messageClass:"incorrect"
+    })
+    
+  }else{
+    //check if game is won before rendering characters
+    this.setState({ characters: this.shuffle(this.handleResetWin(characters)) })
+  }
+  
+}
 
 
 
