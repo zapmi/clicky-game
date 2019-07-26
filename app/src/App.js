@@ -32,6 +32,10 @@ class App extends Component {
     while (0 !== currentIndex) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
+
+      tempVal = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = tempVal;
     }
   }
 }
