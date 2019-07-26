@@ -34,51 +34,79 @@ class App extends Component {
       currentIndex -= 1;
 
       tempVal = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = tempVal;
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = tempVal;
     }
     return array;
   }
-}
-
-handleCorrectChoice = () => {
-
-}
-
-handleResetWin = (currentCharacters) => {
-  
-}
 
 
-
-handleChararcterShuffle = (name) => {
-  // this.handleResetWin();
-  var resetNeeded = false;
-  const characters = this.state.characters.map(ch => {
-    //ch.name === name ? { ...ch, isClicked: true } : ch
-    if(ch.name === name) {
-      if (ch.isClicked === false) {
-        this.handleCorrectChoice()
-        return { ...ch, isClicked: true}
-      }else{
-        resetNeeded = true
-        return { ...ch, isClicked: false}
+  handleCorrectChoice = () => {
+    if (this.state.score + 1 > this.state.topScore) {
+      this.setState({
+        topScore: this.state.topScore + 1
+      })
+      if (this.state.score + 1 === this.state.maxScore) {
+        this.setState({
+          score: this.state.score + 1,
+          message: "YOU WIN!!",
+          messageClass: "correct"
+        })
+      } else {
+        this.state({
+          score: this.state.score + 1,
+          message: "You guess right",
+          messageClass: "correct"
+        })
       }
     }
-    return ch
-  })
+    handleResetWin = (currentCharacters) => {
 
-  if (resetNeeded) {
-    this.setState({
-      characters: this.shuffle(this.handleIncorrectChoice()),
-      messageClass:"incorrect"
-    })
-    
-  }else{
-    //check if game is won before rendering characters
-    this.setState({ characters: this.shuffle(this.handleResetWin(characters)) })
+    }
+
   }
+
   
+
+
+
+  handleChararcterShuffle = (name) => {
+    // this.handleResetWin();
+    var resetNeeded = false;
+    const characters = this.state.characters.map(ch => {
+      //ch.name === name ? { ...ch, isClicked: true } : ch
+      if (ch.name === name) {
+        if (ch.isClicked === false) {
+          this.handleCorrectChoice()
+          return { ...ch, isClicked: true }
+        } else {
+          resetNeeded = true
+          return { ...ch, isClicked: false }
+        }
+      }
+      return ch
+    })
+
+    if (resetNeeded) {
+      this.setState({
+        characters: this.shuffle(this.handleIncorrectChoice()),
+        messageClass: "incorrect"
+      })
+
+    } else {
+      //check if game is won before rendering characters
+      this.setState({ characters: this.shuffle(this.handleResetWin(characters)) })
+    }
+
+  }
+
+
+
+
+
+
+
+
 }
 
 
