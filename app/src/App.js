@@ -37,7 +37,16 @@ class App extends Component {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = tempVal;
     }
+    return array;
   }
+}
+
+handleCorrectChoice = () => {
+
+}
+
+handleResetWin = (currentCharacters) => {
+  
 }
 
 
