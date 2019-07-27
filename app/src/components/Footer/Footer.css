@@ -1,0 +1,16 @@
+.footer {
+    background: red;
+    font-size: 20px;
+    height: 100px;
+    position: relative;
+    color: white;
+    overflow: auto;
+    text-align: center;
+}
+
+.footer img {
+    width: 20px;
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
