@@ -18,7 +18,7 @@ class App extends Component {
       score: 0,
       topScore: 0,
       maxScore: 12,
-      message: "Click a Waldo to begin!",
+      message: "Clicky Game!",
       messageClass: "",
       characters: characters
     };

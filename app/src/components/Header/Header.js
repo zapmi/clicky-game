@@ -3,8 +3,8 @@ import "./Header.css";
 
 const Header = () => (
    <header className="header">
-   	<h1>Clicky Game!</h1>
-   	<h2>Click on image to score points. Do not click the same image twice or your lose the game.</h2>
+   	{/* <h1>Clicky Game!</h1> */}
+   	<h2>Click a Waldo to begin. Do not click the same Waldo twice or you lose.</h2>
    </header>
 
 );
